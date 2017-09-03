@@ -3,27 +3,30 @@
   <SlideAnim Style="RundownAnimBG" Speed="5">
     <!-- Title Area -->
     <Grid Anchor="C,T" Size="parent-6,140" Offset="0,50" Texture="Controls_TitleBarDark" SliceCorner="21,17" SliceTextureSize="42,34">
-      <!-- ================================================================== -->
-      <!--  Tab Container                                                       -->
-      <!-- ================================================================== -->
-      <Container ID="TabHeader" Anchor="C,T" Offset="0,-10" Size="540,61">
+      <!-- ==================================================================	-->
+      <!--	Tab Container																												-->
+      <!-- ==================================================================	-->
+      <Container ID="TabHeader" Anchor="C,T" Offset="0,-10"	Size="540,61">
         <Grid Anchor="L,T" Size="parent,61" Texture="Controls_TabLedge2"  SliceCorner="194,18" SliceSize="52,26" SliceTextureSize="438,61">
-          <!-- My Routes Button -->
-          <GridButton ID="MyRoutesButton" Size="150,34" Offset="30,13" Style="TabButton">
+          <!-- My Routes Button	-->
+          <GridButton	ID="MyRoutesButton" Size="150,34" Offset="30,13" Style="TabButton">
+						<GridButton ID="MyRoutesSelected" Size="parent,parent" Style="TabButtonSelected" ConsumeMouseButton="0" ConsumeMouseOver="1" />
             <Label ID="MyRoutesTabLabel" Anchor="C,C" Offset="0,1" Style="TabFont" String="LOC_TRADE_OVERVIEW_MY_ROUTES"/>
             <Image ID="MyRoutesSelectedArrow" Anchor="C,T" Offset="0,0" Texture="Controls_TabSelectArrow.dds"></Image>
             <Label ID="MyRoutesTabSelectedLabel" Anchor="C,C" Offset="0,1" Style="TabSelectedFont" String="LOC_TRADE_OVERVIEW_MY_ROUTES" Hidden="1"/>
           </GridButton>
 
-          <!-- Routes to Cities Button  -->
-          <GridButton ID="RoutesToCitiesButton" Size="166,34" Offset="188,13" Style="TabButton">
+          <!-- Routes to Cities Button	-->
+          <GridButton	ID="RoutesToCitiesButton" Size="166,34" Offset="188,13" Style="TabButton">
+						<GridButton ID="RoutesToCitiesSelected" Size="parent,parent" Style="TabButtonSelected" ConsumeMouseButton="0" ConsumeMouseOver="1" />
             <Label ID="RoutesToCitiesTabLabel" Anchor="C,C" Offset="0,1" Style="TabFont" String="LOC_TRADE_OVERVIEW_ROUTES_TO_MY_CITIES"/>
             <Image ID="RoutesToCitiesSelectedArrow" Anchor="C,T" Offset="0,0" Texture="Controls_TabSelectArrow.dds"/>
             <Label ID="RoutesToCitiesTabSelectedLabel" Anchor="C,C" Offset="0,1" Style="TabSelectedFont" String="LOC_TRADE_OVERVIEW_ROUTES_TO_MY_CITIES" Hidden="1"/>
           </GridButton>
 
-          <!-- Available Routes Button  -->
-          <GridButton ID="AvailableRoutesButton" Size="150,34" Offset="360,13" Style="TabButton">
+          <!-- Available Routes Button	-->
+          <GridButton	ID="AvailableRoutesButton" Size="150,34" Offset="360,13" Style="TabButton">
+						<GridButton ID="AvailableRoutesSelected" Size="parent,parent" Style="TabButtonSelected" ConsumeMouseButton="0" ConsumeMouseOver="1" />
             <Label ID="AvailableRoutesTabLabel" Anchor="C,C" Offset="0,1" Style="TabFont" String="LOC_TRADE_OVERVIEW_AVAILABLE_ROUTES"/>
             <Image ID="AvailableRoutesSelectedArrow" Anchor="C,T" Offset="0,0" Texture="Controls_TabSelectArrow.dds"/>
             <Label ID="AvailableRoutesTabSelectedLabel" Anchor="C,C" Offset="0,1" Style="TabSelectedFont" String="LOC_TRADE_OVERVIEW_AVAILABLE_ROUTES" Hidden="1"/>
@@ -31,9 +34,9 @@
         </Grid>
       </Container>
 
-      <!-- ================================================================== -->
-      <!--  Header                                                  -->
-      <!-- ================================================================== -->
+      <!-- ==================================================================	-->
+      <!--	Header																									-->
+      <!-- ==================================================================	-->
       <!-- <Label String="BUILDING" Style="FontFlair14" FontStyle="Stroke" SmallCaps="20" SmallCapsType="EveryWord" Color="249, 249, 249, 255" /> -->
       <Grid ID="HeaderFrame" Anchor="C,T" Offset="0,40" Size="parent-20,42" Texture="Controls_DecoFrame" SliceCorner="19,18" SliceSize="1,1" SliceTextureSize="40,38" Color="31,44,53,255">
         <Stack ID="HeaderStack" Anchor="C,C" Offset="0,0" StackGrowth="Right" StackPadding="6">
@@ -43,7 +46,7 @@
       </Grid>
 
       <!-- ================================================================== -->
-      <!--  Sub Header - Contains Column Names, Filter Pulldown, Sort Bar     -->
+      <!--	Sub Header - Contains Column Names, Filter Pulldown, Sort Bar     -->
       <!-- ================================================================== -->
 
       <!-- Group by Pulldown -->
@@ -161,15 +164,15 @@
         <!-- <Box Size="300,1" Anchor="L,B" Offset="56,4" Color="50,53,54,150"/> -->
       </Container>
 
-      <!-- ================================================================== -->
-      <!--  Close Button                                                    -->
-      <!-- ================================================================== -->
+      <!-- ==================================================================	-->
+      <!--	Close Button																										-->
+      <!-- ==================================================================	-->
       <Button ID="CloseButton" Anchor="R,T" Offset="5,40" Style="CloseButtonSmall" />
     </Grid>
 
-    <!-- ================================================================== -->
-    <!--  Body Area                                                         -->
-    <!-- ================================================================== -->
+    <!-- ==================================================================	-->
+    <!--	Body Area																						              -->
+    <!-- ==================================================================	-->
     <Container Anchor="C,B" Size="parent, parent-195" Offset="0,5">
       <ScrollPanel ID="BodyScrollPanel" Size="495,parent" Vertical="1">
         <ScrollBar Anchor="R,C" AnchorSide="O,I"  Offset="0,0" Style="ScrollVerticalBar"/>
@@ -178,15 +181,15 @@
         <Stack ID="BodyStack" StackGrowth="Down"/>
       </ScrollPanel>
     </Container>
-
+    
   </SlideAnim>
 
-  <!-- ================================================================== -->
-  <!--  Instances                                                         -->
-  <!-- ================================================================== -->
+  <!-- ==================================================================	-->
+  <!--	Instances																													-->
+  <!-- ==================================================================	-->
 
   <!-- Section Header -->
-  <Instance Name="HeaderInstance">
+  <Instance	Name="HeaderInstance">
     <Container ID="Top" Size="485,42" Offset="10,4">
       <GridButton ID="HeaderGrid" Texture="TradeOverview_Subheader" SliceCorner="12,11" SliceSize="2,2" Color="67,70,72,255" Size="parent,parent">
         <!-- <Grid           ID="CityBannerFill2"           Anchor="C,C"                  Size="Parent-7,Parent-6"  Offset="-1,-1" Texture="Banner_Darker"    SliceTextureSize="196,34" SliceCorner="98,17"/> -->
@@ -224,9 +227,9 @@
       </Grid>
     </Container>
   </Instance>
-
+  
   <!-- Route Entry -->
-  <Instance Name="RouteInstance">
+  <Instance	Name="RouteInstance">
     <Container ID="Top" Size="485,78" Offset="10,2">
       <GridButton ID="GridButton" Size="parent,parent" Color="255,255,255,150">
           <GridData Texture="Controls_ListButton" SliceCorner="209,29"  SliceTextureSize="417,51" StateOffsetIncrement="0,51"/>

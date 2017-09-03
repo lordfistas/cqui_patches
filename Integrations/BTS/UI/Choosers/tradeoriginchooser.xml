@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\..\CivTech\Libs\ForgeUI\ForgeUI_Assets\Controls.xsd">
-
-  <SlideAnim Style="ChooserAnim">
+	
+  <SlideAnim				Style="ChooserAnim">
     <Stack ID="RouteOriginChooser" StackGrowth="Bottom">
       <!-- Header Container -->
       <Container ID="RouteOriginChooserHeader" Size="parent,150">
         <Label ID="RouteOriginChooserHeaderText" Size="parent,25" Offset="-6,10" Anchor="C,T" Style="FontFlair14" SmallCaps="20" SmallCapsType="EveryWord" Color="0,59,77,255" String="LOC_TRADE_ORIGIN_CHOOSER_HEADER_LABEL_TEXT"/>
         <Grid Size="parent+5,parent-25" Anchor="C,B" Offset="1,0" Texture="DestinationChooser_CurrentSlot" SliceStart="0,0" SliceCorner="30,30" SliceSize="250,90" SliceTextureSize="308,207" >
         </Grid>
-        <Button ID="CloseButton" Anchor="R,T" Offset="-11,-1" Style="CloseButtonSmall"/>
+        <Button					ID="CloseButton"				Anchor="R,T"	Offset="-11,-1" Style="CloseButtonSmall"/>
 
         <!-- City Banner -->
         <Grid               ID="BannerBase"           Anchor="C,T" Offset="0,40"    Size="270,33"               Texture="CityPanel_BannerBase"        SliceCorner="20,10" SliceSize="160,1" SliceTextureSize="199,33" Color="150,170,100,255">
@@ -34,7 +34,7 @@
       <Grid ID="RouteOriginChooserBody" Texture="Controls_ContainerBlue" SliceStart="0,0" SliceCorner="3,3" SliceSize="9,9" SliceTextureSize="16,16" Anchor="C,T" Offset="0,0" Size="parent,parent-150" AutoSize="1">
         <ScrollPanel    ID="CityScrollPanel"  Offset="18,10" Size="parent-22,parent-35" Vertical="1" AutoScrollBar="0">
           <ScrollBar    Anchor="L,T" Size="11,parent-125" AnchorSide="O,I" Offset="4,0" Style="ScrollVerticalBar" />
-          <Stack        ID="CityStack" StackGrowth="Bottom" StackPadding="2" />
+          <Stack				ID="CityStack" StackGrowth="Bottom" StackPadding="2" />
         </ScrollPanel>
       </Grid>
     </Stack>
